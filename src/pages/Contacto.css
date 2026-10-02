@@ -1,0 +1,261 @@
+/* =========================
+   PÁGINA DE CONTACTO
+========================= */
+
+.contacto-page {
+  min-height: 100vh;
+
+  padding: 140px 40px 80px;
+
+  background:
+    linear-gradient(
+      rgba(245, 245, 245, 0.78),
+      rgba(245, 245, 245, 0.78)
+    ),
+    url("/local.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.contacto-header {
+  max-width: 1100px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.contacto-header p {
+  margin: 0 0 10px;
+
+  color: #e63946;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.contacto-header h1 {
+  margin: 0 0 12px;
+
+  color: #111;
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+}
+
+.contacto-header span {
+  color: #666;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contacto-container {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.contacto-card {
+  padding: 35px 25px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(0, 0, 0, 0.07);
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.25s ease;
+}
+
+.contacto-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.contacto-icono {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-icono img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.contacto-card h2 {
+  margin: 0 0 10px;
+
+  color: #111;
+
+  font-size: 24px;
+}
+
+.contacto-card p {
+  margin: 0 0 25px;
+
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.contacto-button {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #222;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.contacto-button:hover {
+  background: #444;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-button {
+  background: #25d366;
+
+  box-shadow:
+    0 5px 15px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-button:hover {
+  background: #1ebe5d;
+
+  box-shadow:
+    0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .contacto-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+  .contacto-page {
+    padding: 120px 18px 60px;
+
+    background-attachment: scroll;
+  }
+
+  .contacto-header {
+    margin-bottom: 30px;
+  }
+
+  .contacto-header p {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .contacto-header h1 {
+    font-size: 38px;
+  }
+
+  .contacto-header span {
+    font-size: 15px;
+  }
+
+  .contacto-container {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+  .contacto-card {
+    padding: 30px 20px;
+  }
+}

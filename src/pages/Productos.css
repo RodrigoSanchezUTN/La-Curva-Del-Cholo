@@ -1,0 +1,291 @@
+/* =========================
+   PÁGINA PRODUCTOS
+========================= */
+
+.productos-page {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 140px 40px 80px;
+
+  background-image: url("/local.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   FONDO DIFUMINADO
+========================= */
+
+.productos-page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/local.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  filter: blur(10px);
+
+  transform: scale(1.05);
+
+  opacity: 0.7;
+
+  z-index: 0;
+}
+
+.productos-page::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.30);
+
+  z-index: 1;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.productos-header {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1100px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.productos-header p {
+  margin: 0 0 10px;
+
+  color: #e63946;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.productos-header h1 {
+  margin: 0 0 15px;
+
+  font-size: 48px;
+  line-height: 1.2;
+
+  color: #111;
+}
+
+.productos-header span {
+  font-size: 18px;
+
+  color: #666;
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.categorias {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.categoria-card {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  border-radius: 18px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.categoria-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.categoria-card.herramientas {
+  background-image: url("/categorias/herramientas.jpg");
+}
+
+.categoria-card.construccion {
+  background-image: url("/categorias/construccion.jpg");
+}
+
+.categoria-card.buloneria {
+  background-image: url("/categorias/buloneria.jpg");
+}
+
+
+/* =========================
+   DEGRADADO DE TARJETAS
+========================= */
+
+.categoria-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+
+  z-index: 1;
+}
+
+
+/* =========================
+   INFORMACIÓN DE TARJETAS
+========================= */
+
+.categoria-overlay {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 30px;
+}
+
+.categoria-overlay h2 {
+  margin: 0 0 10px;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+}
+
+.categoria-overlay p {
+  margin: 0 0 20px;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+.categoria-overlay span {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .categorias {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+  }
+
+  .categoria-card {
+    height: 400px;
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+  .productos-page {
+    padding: 120px 20px 60px;
+  }
+
+  .productos-header {
+    margin-bottom: 35px;
+  }
+
+  .productos-header h1 {
+    font-size: 38px;
+  }
+
+  .productos-header span {
+    font-size: 16px;
+  }
+
+  .categoria-card {
+    height: 350px;
+  }
+
+  .categoria-overlay {
+    padding: 25px;
+  }
+
+  .categoria-overlay h2 {
+    font-size: 28px;
+  }
+
+  .categoria-overlay p {
+    font-size: 15px;
+  }
+}
